@@ -1,0 +1,231 @@
+body{
+	margin: 0;
+}
+
+body, input, button {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+
+}
+header {
+
+	width: 500px;
+	height: 50px;
+	padding: 15px;
+	
+	position: sticky;
+    top: 0;
+	
+	background: #909090;
+	box-shadow: 0px 2px 4px rgba (44,62,80,0.15);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+header input{
+	width: 415px;
+	height: 50px;
+	float: left;
+	color: white;
+	font-size: 15px;
+	font-weight: 400;
+	text-indent: 18px;
+	padding: 0 60px 0 0px;
+	background:#c7c7c7;
+	opacity: 0.8;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius:5px;
+	
+	border: 0px;
+	box-shadow: none;
+	outline:none;
+	-webkit-appearance: none ;
+	-moz-appearance: none ;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+header button{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 15px;
+	right: 16px;
+	z-index: 2;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background: #e9e9e9;
+	border:0px;
+	box-shadow: none;
+	outline: none;
+	-webkit-appearance: none ;
+	-moz-appearance: none ;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+header button:hover{
+	cursor: pointer;
+	background: #e3e3e3;
+}
+header button svg{
+width: 16px;
+height: 16px;
+position: absolute;
+top:50%;
+left: 50%;
+margin: -8px 0 0 -8px;
+}
+header button svg .fill{
+fill: #848484;
+}
+#addItem svg:hover{
+ transform: scale(1.2);
+ -webkit-transform: scale(1.2);
+ -moz-transform: scale(1.2);
+} 
+
+/* Chrome/Opera/Safari */
+header input::-webkit-input-placeholder { 
+color:white;
+} 
+header input::-moz-input-placeholder { 
+color:white;
+} 
+header input::-ms-input-placeholder { 
+color:white;
+}
+
+.container{
+	width: 530px;
+	height: auto;
+	background:  #f2f2f2;
+	margin-right: auto;
+	margin-left: auto;
+	border-top-right-radius: 10px;
+	position: sticky;
+    
+    -webkit-box-shadow: 6px 6px 37px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 6px 37px -1px rgba(0,0,0,0.75);
+box-shadow: 6px 6px 37px -1px rgba(0,0,0,0.75);
+	
+}
+.content{
+	width:500px;
+	padding-top: 20px;
+	margin-left: 0px;
+	height: 500px;
+}
+.todo{
+	height: auto;
+	margin-top: 5px;
+}
+
+ul.todo{
+	width: 500px; 
+	list-style-type: none;
+	padding-left: 20px;
+
+
+}
+ul.todo li{
+	width: 80%; 
+	min-height: 27px;
+	font-size: 14px;
+	font-weight: 500;
+	float: left;
+	color:#444;
+	line-height: 22px;
+	
+	background: white;
+	border-radius: 5px;
+	margin: 0 0 10px 0;
+	box-shadow: 0px 1px 2px rgba(44,62,80,0.10);
+	position: relative;
+
+	padding: 15px 80px 13px 10px;
+} 
+ul.todo li:last-of-type{
+margin: 0;
+}
+ul.todo li .buttons{
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+}
+ul.todo li .buttons button{
+width: 50px;
+height: 50px;
+float: left;
+background: none;
+border: 0;
+box-shadow: none;
+outline: none;
+position: relative;
+
+appearance: none;
+-moz-appearance: none;
+
+}
+ul.todo li .buttons button:last-of-type:before{
+content:'';
+width: 1px;
+height: 30px;
+position: absolute;
+top: 10px;
+left: 0;
+float: left;
+background: lightgray;
+}
+.remove:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+	color: red;
+	
+}
+.complete:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	color: green;
+	
+}
+#completed{
+	margin-top: 200px;
+	padding: 30px 0 0 0;
+	position: relative;
+	margin-left: 20px;
+	
+	
+}
+#completed:not(:empty){
+	opacity: 0.5;
+}
+#completed:not(:empty):before{
+	content: '';
+	width: 150px;
+	height: 1px;
+	background: #909090;
+	position: absolute;
+	left: 50%;
+	top:30px;
+	margin: 0 0 0 -75px;
+}
+#todo:empty:after{
+	content: 'Jeszcze nie dodałeś żadnych zadań do zrobienia';
+	margin: 0 0 0 0;
+}
+#completed:empty:after{
+	content: 'Jeszcze nie ukończyłeś żadnego zadania';
+	margin: 15px 0 0 0;
+}
+#todo:after, #completed:after{
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	color: #aaa;
+}
